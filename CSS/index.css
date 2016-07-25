@@ -1,6 +1,6 @@
 /* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
+v2.0 | 20110126
+License: none (public domain)
 */
 
 html, body, div, span, applet, object, iframe,
@@ -54,55 +54,56 @@ table
 	border-spacing: 0;
 }
 
+@media screen and (min-width:1024px){
+	body
+	{ align:center;
+		max-width:80%;
+		background-color:#191919;
+		font-family: "Arial";
+	}
+	#topBar span
+	{
 
-body
-{ align:center;
-	max-width:;
-  background-color:#191919;
-  font-family: "Arial";
-}
-#topBar span
-{
+	}
 
-}
+	#topBar h1
+	{
+		color:#D7D7D7;
+	}
 
-#topBar h1
-{
-  color:#D7D7D7;
-}
+	#topBar h2
+	{
+		color:#fc6d36;
+	}
 
-#topBar h2
-{
-  color:#fc6d36;
-}
+	#navBar ul li
+	{	display:inline-block;
+		text-align: center;
+		align:right;
+		min-width:20%;
+		color:#FEE0DA;
+		background-color:#282828;
+	}
 
-#navBar ul li
-{	display:inline-block;
-	text-align: center;
-	align:right;
-	min-width:20%;
-	color:#FEE0DA;
-	background-color:#282828;
-}
+	.notRightMost{
+		border-right:4px solid;
+		border-right-color:#fc6270;
+	}
 
-.notRightMost{
-	border-right:4px solid;
-	border-right-color:#fc6270;
-}
+	section h1
+	{
+		padding: 0.25em;
+		font-size:3em;
+		color:#fc6d36;
+	}
 
-section h1
-{
-	padding: 0.25em;
-	font-size:3em;
-	color:#fc6d36;
-}
-
-section p
-{
-  color:#FEE0DA;
-	padding: 1em;
-}
-section a
-{
-  color:#fc6270;
+	section p
+	{
+		color:#FEE0DA;
+		padding: 1em;
+	}
+	section a
+	{
+		color:#fc6270;
+	}
 }
