@@ -61,19 +61,9 @@ body
   background-color:#191919;
   font-family: "Arial";
 }
-
-#navBar ul li
+#topBar span
 {
-	text-align: center;
-	align:right;
-	min-width:15%;
-	color:#FEE0DA;
-	display:inline-block;
-	background-color:#282828;
-}
 
-.notRightMost{
-	border-right:auto;
 }
 
 #topBar h1
@@ -86,6 +76,19 @@ body
   color:#fc6d36;
 }
 
+#navBar ul li
+{	display:inline-block;
+	text-align: center;
+	align:right;
+	min-width:20%;
+	color:#FEE0DA;
+	background-color:#282828;
+}
+
+.notRightMost{
+	border-right:4px solid;
+	border-right-color:#fc6270;
+}
 
 section h1
 {
