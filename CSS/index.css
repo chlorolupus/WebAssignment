@@ -57,30 +57,37 @@ table
 @media screen and (min-width:1024px){
 	body
 	{ align:center;
-		max-width:80%;
+		padding-top:5%;
+		padding-bottom:5%;
+		padding-left:20%;
+		padding-right:20%;
 		background-color:#191919;
 		font-family: "Arial";
 	}
+
+	#topbar
+	{
+
+	}
+
 	#topBar span
 	{
-
+		display:inline-block;
 	}
 
-	#topBar h1
+	.logo
 	{
-		color:#D7D7D7;
+		width:320px;
 	}
 
-	#topBar h2
-	{
-		color:#fc6d36;
+	#navBar ul
+	{ display:inline-flex;
 	}
 
 	#navBar ul li
-	{	display:inline-block;
-		text-align: center;
+	{	text-align: center;
 		align:right;
-		min-width:20%;
+		min-width:100%;
 		color:#FEE0DA;
 		background-color:#282828;
 	}
