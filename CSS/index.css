@@ -55,27 +55,26 @@ table
 }
 
 @media screen and (min-width:1024px){
-    body
-    { 
-        align:center;
-		padding:0 20% 5% 20%;
-		background-color:#191919;
-		font-family: "Arial";
-	}
-
-	#topBar
+    *{
+        background-color:#191919;
+        font-family: "Arial";
+    }
+    
+    body{
+        padding:0 15% 5% 15%;
+    }
+    
+    header
 	{
-		display:inline-block;
-        width: 920px;
         padding-bottom: 25px;
         margin-bottom: 15px;
-        border-bottom: 2px solid rgba(252, 109, 54, 0.67);
+        border-bottom: 3px solid #ff606d;
 	}
 
 	.logo
 	{
-		width:320px;
-        object-position: 0px 40px ;
+        width: 35%;
+        object-position: 0px 30px ;
 	}
     
     #navBar {
@@ -84,42 +83,39 @@ table
 
 	#navBar ul
 	{ 
-        display:inline-flex;
-        height: 40px;
-        width: 350px;
+        display: inline-flex;
 	}
 
-	#navBar ul li
+	li
 	{	
-        padding: 10px;
-        list-style-type:none;
         text-align:center;
+        padding: 5px;
+        background-color:#282828;
         font-size: 14pt;
-        color:#FEE0DA;
-		background-color:#282828;
-		min-height:50%;
-        min-width:50%;
+        color:#ffffff;
+        min-width:40%;
 	}
 
-	.notRightMost{
-		border-right:4px solid;
-		border-right-color:#fc6270;
+	.nav1, .nav2
+    {
+		border-right:2px solid;
+		border-right-color:#ffffff;
 	}
 
     section {
         display: inline-block;
-        width: 500px;
+        width: 48%;
         padding-right: 10px;
     }
     
-	section h1
+    h1
 	{
 		padding: 0.25em;
 		font-size:3em;
 		color:#fc6d36;
 	}
 
-	section p
+	p
 	{
 		color:#FEE0DA;
 		padding: 1em;
@@ -131,12 +127,11 @@ table
 	}
     
     aside {
-        display: inline-block;
-        width: 200px;
+        display: inline-flex;
+        width: 48%;
     }
     
-    aside img{
-        width: 380px;
+   picture img{
+        height: 280px;
     }
-    
 }
