@@ -55,7 +55,7 @@ table
 }
 
 @media screen and (min-width:1024px){
-		body
+    body
     { 
         align:center;
 		padding:0 20% 5% 20%;
@@ -66,24 +66,35 @@ table
 	#topBar
 	{
 		display:inline-block;
+        width: 920px;
+        padding-bottom: 25px;
+        margin-bottom: 15px;
+        border-bottom: 2px solid rgba(252, 109, 54, 0.67);
 	}
 
 	.logo
 	{
 		width:320px;
+        object-position: 0px 40px ;
 	}
+    
+    #navBar {
+        display: inline-block;
+    }
 
 	#navBar ul
 	{ 
         display:inline-flex;
+        height: 40px;
+        width: 350px;
 	}
 
 	#navBar ul li
 	{	
+        padding: 10px;
         list-style-type:none;
         text-align:center;
-        font-size:14pt;
-		align:right;
+        font-size: 14pt;
         color:#FEE0DA;
 		background-color:#282828;
 		min-height:50%;
@@ -95,6 +106,12 @@ table
 		border-right-color:#fc6270;
 	}
 
+    section {
+        display: inline-block;
+        width: 500px;
+        padding-right: 10px;
+    }
+    
 	section h1
 	{
 		padding: 0.25em;
@@ -112,4 +129,14 @@ table
 	{
 		color:#fc6270;
 	}
+    
+    aside {
+        display: inline-block;
+        width: 200px;
+    }
+    
+    aside img{
+        width: 380px;
+    }
+    
 }
