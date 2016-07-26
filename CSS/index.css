@@ -54,6 +54,8 @@ table
 	border-spacing: 0;
 }
 
+/*testing*/
+
 @media screen and (min-width:1024px){
 	body
 	{ align:center;
