@@ -55,22 +55,15 @@ table
 }
 
 @media screen and (min-width:1024px){
-	body
-	{ align:center;
-		padding-top:5%;
-		padding-bottom:5%;
-		padding-left:20%;
-		padding-right:20%;
+		body
+    { 
+        align:center;
+		padding:0 20% 5% 20%;
 		background-color:#191919;
 		font-family: "Arial";
 	}
 
-	#topbar
-	{
-
-	}
-
-	#topBar span
+	#topBar
 	{
 		display:inline-block;
 	}
@@ -81,15 +74,20 @@ table
 	}
 
 	#navBar ul
-	{ display:inline-flex;
+	{ 
+        display:inline-flex;
 	}
 
 	#navBar ul li
-	{	text-align: center;
+	{	
+        list-style-type:none;
+        text-align:center;
+        font-size:14pt;
 		align:right;
-		min-width:100%;
-		color:#FEE0DA;
+        color:#FEE0DA;
 		background-color:#282828;
+		min-height:50%;
+        min-width:50%;
 	}
 
 	.notRightMost{
@@ -109,6 +107,7 @@ table
 		color:#FEE0DA;
 		padding: 1em;
 	}
+
 	section a
 	{
 		color:#fc6270;
