@@ -81,22 +81,22 @@ ul.topnav li.icon {display: none;}
         width: device-width;
         zoom: 1;
     }
-    
+
     body{
         background-color:#191919;
         padding:0 15% 5% 15%;
     }
-    
+
     header
 	{
         padding-bottom: 25px;
         margin-bottom: 15px;
         border-bottom: 3px solid #ff606d;
 	}
-    
-    
+
+
     ul.topnav.responsive {position: relative;}
-    
+
     ul.topnav.responsive li.icon {
         position: absolute;
         right: 0;
@@ -110,7 +110,7 @@ ul.topnav li.icon {display: none;}
         display: block;
         text-align: left;
     }
-    
+
 	.logo
 	{
         width: 35%;
@@ -121,44 +121,44 @@ ul.topnav li.icon {display: none;}
         width: 48%;
         padding-right: 10px;
     }
-    
+
     h1
 	{
 		padding: 0.25em;
 		font-size:3vw;
 		color:#fc6d36;
 	}
-    
+
 	p
 	{
 		color:#FEE0DA;
 		padding: 1em;
         font-size:1.5vw;
 	}
-    
+
     aside{
         display: inline-flex;
         width: 48%;
     }
-    
+
     form{
         width:100%;
         padding: 1em;
         color:#FEE0DA;
     }
-    
+
     #name, #email, #comment{
-        color:#40d7ff;        
+        color:#40d7ff;
         background-color:#282828;
         width: 100%;
         padding: 5px;
         border: none;
     }
-    
+
     #comment{
         height: 60px;
     }
-    
+
     #send, #reset{
         color:#ffffff;
         background-color:#282828;
@@ -171,22 +171,22 @@ ul.topnav li.icon {display: none;}
         width: device-width;
         zoom: 1;
     }
-    
+
     body{
         background-color:#191919;
         padding:0 15% 5% 15%;
     }
-    
+
     header
 	{
         padding-bottom: 25px;
         margin-bottom: 15px;
         border-bottom: 3px solid #ff606d;
 	}
-    
-    
+
+
     ul.topnav.responsive {position: relative;}
-    
+
     ul.topnav.responsive li.icon {
         position: absolute;
         right: 0;
@@ -200,55 +200,55 @@ ul.topnav li.icon {display: none;}
         display: block;
         text-align: left;
     }
-    
+
 	.logo
 	{
         width: 30%;
 	}
-    
+
     section {
         display: inline-block;
         width: 100%;
         padding-right: 10px;
     }
-    
+
     h1
 	{
 		padding: 0.25em;
 		font-size:5vw;
 		color:#fc6d36;
 	}
-    
+
 	p
 	{
 		color:#FEE0DA;
 		padding: 1em;
         font-size:2vw;
 	}
-    
+
     aside{
         display: inline-block;
         width: 80%;
     }
-    
+
     form{
         width:100%;
         padding: 1em;
         color:#FEE0DA;
     }
-    
+
     #name, #email, #comment{
-        color:#40d7ff;        
+        color:#40d7ff;
         background-color:#282828;
         width: 100%;
         padding: 5px;
         border: none;
     }
-    
+
     #comment{
         height: 60px;
     }
-    
+
     #send, #reset{
         color:#ffffff;
         background-color:#282828;
@@ -260,73 +260,88 @@ ul.topnav li.icon {display: none;}
         width: device-width;
         zoom: 1;
     }
-    
+
     body{
         background-color:#191919;
         padding:0 5% 5% 5%;
     }
-    
+
     header
 	{
         padding-bottom: 25px;
         margin-bottom: 15px;
         border-bottom: 3px solid #ff606d;
 	}
+		ul.topnav.responsive {position: relative;}
+
+		ul.topnav.responsive li.icon {
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		ul.topnav.responsive li {
+			float: none;
+			display: inline;
+		}
+		ul.topnav.responsive li a {
+				display: block;
+				text-align: left;
+			}
 
     ul.topnav li:not(:first-child) {display: none;}
     ul.topnav li.icon {
         float: right;
         display: inline-block;
     }
-    
+
 	.logo
 	{
         width: 45%;
 	}
-    
+
     section {
         display: inline-block;
         width: 100%;
         padding-right: 10px;
     }
-    
+
     h1
 	{
 		padding: 0.25em;
 		font-size:10vw;
 		color:#fc6d36;
 	}
-    
+
 	p
 	{
 		color:#FEE0DA;
 		padding: 1em;
         font-size:4vw;
 	}
-    
+
     aside{
         display: inline-block;
         width: 80%;
     }
-    
+
     form{
         width:100%;
         padding: 1em;
         color:#FEE0DA;
     }
-    
+
     #name, #email, #comment{
-        color:#40d7ff;        
+        color:#40d7ff;
         background-color:#282828;
         width: 100%;
         padding: 5px;
         border: none;
     }
-    
+
     #comment{
         height: 60px;
     }
-    
+
     #send, #reset{
         color:#ffffff;
         background-color:#282828;

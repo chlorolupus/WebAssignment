@@ -54,25 +54,6 @@ table
 	border-spacing: 0;
 }
 
-<<<<<<< HEAD
-@media screen and (min-width:	px){
-	body
-	{ align:center;
-		padding-top:5%;
-		padding-bottom:5%;
-		padding-left:10%;
-		padding-right:10%;
-		background-color:#191919;
-		font-family: "Arial";
-	}
-
-	#topbar
-	{
-
-	}
-
-	#topBar span
-=======
 a:link {
     color: white;
     text-decoration: none;
@@ -91,7 +72,7 @@ a:hover {
 section a:link{
     color:#fc6270;
 }
-    
+
 section a:visited {
     color: #fc6270;
 }
@@ -112,16 +93,16 @@ section a:hover {
         width: device-width;
         zoom: 1;
     }
-    
+
     *{
         background-color:#191919;
         font-family: "Arial";
     }
-    
+
     body{
         padding:5% 15% 5% 15%;
     }
-    
+
     header
 	{
         padding-bottom: 25px;
@@ -133,18 +114,18 @@ section a:hover {
 	{
         width: 35%;
 	}
-    
+
     #navBar {
         display: inline-block;
     }
 
 	#navBar ul
-	{  
+	{
         display: inline-flex;
 	}
 
 	li
-	{	
+	{
         text-align:center;
         padding: 5px;
         background-color:#282828;
@@ -164,9 +145,8 @@ section a:hover {
         width: 48%;
         padding-right: 2%;
     }
-    
+
     h1
->>>>>>> FixedViewport&FluidTextForContract
 	{
 		padding: 0.25em;
 		font-size:2.7vw;
@@ -180,27 +160,27 @@ section a:hover {
         font-size: 1.3vw;
 	}
 
-    
-    
+
+
     aside {
         display: inline-flex;
         width: 48%;
     }
-    
+
    picture img{
         height: 280px;
     }
-    
+
     section2 img{
         display: inline-block;
         width: 24%;
     }
-    
+
     #photoCol {
         padding-bottom: 2%;
         padding-top: 2%;
     }
-    
+
     iframe {
         display: block;
         margin: 0 auto;
@@ -216,16 +196,16 @@ section a:hover {
         width: device-width;
         zoom: 1;
     }
-    
+
     *{
         background-color:#191919;
         font-family: "Arial";
     }
-    
+
     body{
         padding:3% 10% 3% 10%;
     }
-    
+
     header
 	{
         padding-bottom: 10px;
@@ -237,36 +217,24 @@ section a:hover {
 	{
         width: 30%;
 	}
-    
+
     #navBar {
         display: inline-block;
     }
 
 	#navBar ul
-<<<<<<< HEAD
-	{ display:inline-flex;
-	}
-
-	#navBar ul li
-	{	text-align: center;
-		align:right;
-		min-width:100%;
-		color:#FEE0DA;
-		background-color:#282828;
-=======
-	{  
+	{
         display: inline-flex;
 	}
 
 	li
-	{	
+	{
         text-align:center;
         padding: 5px;
         background-color:#282828;
         font-size: 1.7vw;
         color:#ffffff;
         min-width:40%;
->>>>>>> FixedViewport&FluidTextForContract
 	}
 
 	.nav1, .nav2
@@ -275,189 +243,76 @@ section a:hover {
 		border-right-color:#ffffff;
 	}
 
-<<<<<<< HEAD
-	#content
-	{display:block;
-
-	}
-
-	section
-	{
-		width:100%;
-	}
-
-	section h1
-	{
-		padding-top: 0.25em;
-		padding-bottom: 0.25em;
-		font-size:3em;
-=======
     section {
         display: inline-block;
         width: 100%;
         padding-right: 10px;
     }
-    
+
     h1
 	{
 		padding: 0.25em;
 		font-size: 4.5vw;
->>>>>>> FixedViewport&FluidTextForContract
 		color:#fc6d36;
 	}
-    
+
 	p
 	{
 		color:#FEE0DA;
-<<<<<<< HEAD
-		padding-bottom:1em;
-	}
-	section a
-	{
-		color:#fc6270;
-	}
-
-	aside
-	{	padding-top: 1em;
-		width:100%;
-=======
 		padding: 1em;
         font-size: 1.8vw;
->>>>>>> FixedViewport&FluidTextForContract
 	}
-    
+
     aside{
         display: inline-block;
         width: 80%;
     }
-    
+
     form{
         width:100%;
         padding: 1em;
         color:#FEE0DA;
     }
-    
+
     #name, #email, #comment{
-        color:#40d7ff;        
+        color:#40d7ff;
         background-color:#282828;
         width: 100%;
         padding: 5px;
         border: none;
     }
-    
+
     #comment{
         height: 60px;
     }
-    
+
     #send, #reset{
         color:#ffffff;
         background-color:#282828;
     }
-    
-    
+
+
     picture img{
         width: 100%;
         padding-top: 5%;
     }
-    
+
     section2 img{
         display: inline-block;
         width: 45%;
     }
-    
+
     #photoCol {
         padding-bottom: 2%;
         padding-top: 2%;
     }
-    
+
     iframe {
         display: none;
     }
-    
+
 }
 
-<<<<<<< HEAD
-	aside picture
-	{
-		width:100%;
-	}
-
-	aside picture img
-	{
-		width:100%;
-	}
-}
-
-@media screen and (min-width:1024px){
-	body
-	{ align:center;
-		padding: 0 20% 5% 20%;
-		background-color:#191919;
-		font-family: "Arial";
-	}
-
-	#topbar
-	{	display:inline-block;
-		border-bottom: 5px solid #fc6270;
-
-	}
-
-
-	.logo
-	{
-		width:320px;
-	}
-
-	#navBar ul
-	{
-		display:inline-flex;
-	}
-
-	#navBar ul li
-	{
-		align:right;
-		text-align: center;
-		font-size:14pt;
-		min-width:100%;
-		color:#FEE0DA;
-		background-color:#282828;
-		min-height:50%;
-		min-width:50%;
-	}
-
-	.notRightMost{
-		border-right:4px solid;
-		border-right-color:#fc6270;
-	}
-
-	#content
-	{
-		display:inline-flex;
-		border-top:5px solid #fc6270;
-		padding-top:2em
-		width:100%;
-	}
-
-	section
-	{
-		width:60%;
-	}
-
-	section h1
-	{
-		padding-top: 0.25em;
-		padding-bottom: 0.25em;
-		font-size:3em;
-		color:#fc6d36;
-	}
-
-	section p
-	{
-		color:#FEE0DA;
-		padding-bottom:1em;
-	}
-	section a
-=======
 
 /* below 481 Layout*/
 
@@ -467,56 +322,39 @@ section a:hover {
         width: device-width;
         zoom: 1;
     }
-    
+
     *{
         background-color:#191919;
         font-family: "Arial";
     }
-    
+
     body{
         padding:1% 5% 1% 5%;
     }
-    
+
     header
->>>>>>> FixedViewport&FluidTextForContract
 	{
         padding-bottom: 5px;
         margin-bottom: 15px;
         border-bottom: 3px solid #ff606d;
 	}
 
-<<<<<<< HEAD
-	aside
-	{	padding-top: 1em;
-		width:40%;
-	}
-
-	aside picture
-	{
-		width:100%;
-	}
-
-	aside picture img
-	{
-		width:100%;
-	}
-=======
 	.logo
 	{
         width: 45%;
 	}
-    
+
     #navBar {
         display: inline-block;
     }
 
 	#navBar ul
-	{  
+	{
         display: inline-flex;
 	}
 
 	li
-	{	
+	{
         text-align:center;
         padding: 5px;
         background-color:#282828;
@@ -536,67 +374,65 @@ section a:hover {
         width: 100%;
         padding-right: 10px;
     }
-    
+
     h1
 	{
 		padding: 0.25em;
 		font-size: 5vw;
 		color:#fc6d36;
 	}
-    
+
 	p
 	{
 		color:#FEE0DA;
 		padding: 1em;
         font-size: 3vw;
 	}
-    
+
     aside{
         display: inline-block;
         width: 80%;
     }
-    
+
     form{
         width:100%;
         padding: 1em;
         color:#FEE0DA;
     }
-    
+
     #name, #email, #comment{
-        color:#40d7ff;        
+        color:#40d7ff;
         background-color:#282828;
         width: 100%;
         padding: 5px;
         border: none;
     }
-    
+
     #comment{
         height: 60px;
     }
-    
+
     #send, #reset{
         color:#ffffff;
         background-color:#282828;
     }
-    
+
     picture img{
         width: 100%;
         padding-top: 5%;
     }
-    
+
     section2 img{
         display: inline-block;
         width: 100%;
     }
-    
+
     #photoCol {
         padding-bottom: 2%;
         padding-top: 2%;
     }
-    
+
     iframe {
         display: none;
     }
->>>>>>> FixedViewport&FluidTextForContract
 }
-
