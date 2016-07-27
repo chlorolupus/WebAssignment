@@ -81,12 +81,19 @@ section a:hover {
     color: orange;
 }
 
+@viewport { width: auto; }
+
 
 
 /* 1024 Layout*/
 
 
 @media screen and (min-width:1024px){
+    @viewport{
+        width: device-width;
+        zoom: 1;
+    }
+    
     *{
         background-color:#191919;
         font-family: "Arial";
@@ -122,7 +129,7 @@ section a:hover {
         text-align:center;
         padding: 5px;
         background-color:#282828;
-        font-size: 14pt;
+        font-size: 1.7vw;
         color:#ffffff;
         min-width:40%;
 	}
@@ -142,7 +149,7 @@ section a:hover {
     h1
 	{
 		padding: 0.25em;
-		font-size:3em;
+		font-size:2.7vw;
 		color:#fc6d36;
 	}
 
@@ -150,6 +157,7 @@ section a:hover {
 	{
 		color:#FEE0DA;
 		padding: 1em;
+        font-size: 1.3vw;
 	}
 
     
@@ -184,6 +192,11 @@ section a:hover {
 
 
 @media screen and (min-width:481px) and (max-width:1023px){
+    @viewport{
+        width: device-width;
+        zoom: 1;
+    }
+    
     *{
         background-color:#191919;
         font-family: "Arial";
@@ -219,7 +232,7 @@ section a:hover {
         text-align:center;
         padding: 5px;
         background-color:#282828;
-        font-size: 14pt;
+        font-size: 1.7vw;
         color:#ffffff;
         min-width:40%;
 	}
@@ -239,7 +252,7 @@ section a:hover {
     h1
 	{
 		padding: 0.25em;
-		font-size:3em;
+		font-size: 4.5vw;
 		color:#fc6d36;
 	}
     
@@ -247,6 +260,7 @@ section a:hover {
 	{
 		color:#FEE0DA;
 		padding: 1em;
+        font-size: 1.8vw;
 	}
     
     aside{
@@ -304,6 +318,11 @@ section a:hover {
 
 
 @media screen and (max-width:480px){
+    @viewport{
+        width: device-width;
+        zoom: 1;
+    }
+    
     *{
         background-color:#191919;
         font-family: "Arial";
@@ -339,7 +358,7 @@ section a:hover {
         text-align:center;
         padding: 5px;
         background-color:#282828;
-        font-size: 14pt;
+        font-size: 3vw;
         color:#ffffff;
         min-width:40%;
 	}
@@ -359,7 +378,7 @@ section a:hover {
     h1
 	{
 		padding: 0.25em;
-		font-size:3em;
+		font-size: 5vw;
 		color:#fc6d36;
 	}
     
@@ -367,6 +386,7 @@ section a:hover {
 	{
 		color:#FEE0DA;
 		padding: 1em;
+        font-size: 3vw;
 	}
     
     aside{
