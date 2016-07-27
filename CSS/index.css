@@ -93,7 +93,7 @@ section a:hover {
     }
     
     body{
-        padding:0 15% 5% 15%;
+        padding:5% 15% 5% 15%;
     }
     
     header
@@ -106,7 +106,6 @@ section a:hover {
 	.logo
 	{
         width: 35%;
-        object-position: 0px 30px ;
 	}
     
     #navBar {
