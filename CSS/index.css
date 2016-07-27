@@ -136,7 +136,7 @@ section a:hover {
     section {
         display: inline-block;
         width: 48%;
-        padding-right: 10px;
+        padding-right: 2%;
     }
     
     h1
@@ -179,3 +179,241 @@ section a:hover {
         padding-top: 2%;
     }
 }
+
+/* above 481 Layout*/
+
+
+@media screen and (min-width:481px) and (max-width:1023px){
+    *{
+        background-color:#191919;
+        font-family: "Arial";
+    }
+    
+    body{
+        padding:3% 10% 3% 10%;
+    }
+    
+    header
+	{
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+        border-bottom: 3px solid #ff606d;
+	}
+
+	.logo
+	{
+        width: 30%;
+	}
+    
+    #navBar {
+        display: inline-block;
+    }
+
+	#navBar ul
+	{  
+        display: inline-flex;
+	}
+
+	li
+	{	
+        text-align:center;
+        padding: 5px;
+        background-color:#282828;
+        font-size: 14pt;
+        color:#ffffff;
+        min-width:40%;
+	}
+
+	.nav1, .nav2
+    {
+		border-right:2px solid;
+		border-right-color:#ffffff;
+	}
+
+    section {
+        display: inline-block;
+        width: 100%;
+        padding-right: 10px;
+    }
+    
+    h1
+	{
+		padding: 0.25em;
+		font-size:3em;
+		color:#fc6d36;
+	}
+    
+	p
+	{
+		color:#FEE0DA;
+		padding: 1em;
+	}
+    
+    aside{
+        display: inline-block;
+        width: 80%;
+    }
+    
+    form{
+        width:100%;
+        padding: 1em;
+        color:#FEE0DA;
+    }
+    
+    #name, #email, #comment{
+        color:#40d7ff;        
+        background-color:#282828;
+        width: 100%;
+        padding: 5px;
+        border: none;
+    }
+    
+    #comment{
+        height: 60px;
+    }
+    
+    #send, #reset{
+        color:#ffffff;
+        background-color:#282828;
+    }
+    
+    
+    picture img{
+        width: 100%;
+        padding-top: 5%;
+    }
+    
+    section2 img{
+        display: inline-block;
+        width: 45%;
+    }
+    
+    #photoCol {
+        padding-bottom: 2%;
+        padding-top: 2%;
+    }
+    
+    iframe {
+        display: none;
+    }
+    
+}
+
+
+/* below 481 Layout*/
+
+
+@media screen and (max-width:480px){
+    *{
+        background-color:#191919;
+        font-family: "Arial";
+    }
+    
+    body{
+        padding:1% 5% 1% 5%;
+    }
+    
+    header
+	{
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+        border-bottom: 3px solid #ff606d;
+	}
+
+	.logo
+	{
+        width: 45%;
+	}
+    
+    #navBar {
+        display: inline-block;
+    }
+
+	#navBar ul
+	{  
+        display: inline-flex;
+	}
+
+	li
+	{	
+        text-align:center;
+        padding: 5px;
+        background-color:#282828;
+        font-size: 14pt;
+        color:#ffffff;
+        min-width:40%;
+	}
+
+	.nav1, .nav2
+    {
+		border-right:2px solid;
+		border-right-color:#ffffff;
+	}
+
+    section {
+        display: inline-block;
+        width: 100%;
+        padding-right: 10px;
+    }
+    
+    h1
+	{
+		padding: 0.25em;
+		font-size:3em;
+		color:#fc6d36;
+	}
+    
+	p
+	{
+		color:#FEE0DA;
+		padding: 1em;
+	}
+    
+    aside{
+        display: inline-block;
+        width: 80%;
+    }
+    
+    form{
+        width:100%;
+        padding: 1em;
+        color:#FEE0DA;
+    }
+    
+    #name, #email, #comment{
+        color:#40d7ff;        
+        background-color:#282828;
+        width: 100%;
+        padding: 5px;
+        border: none;
+    }
+    
+    #comment{
+        height: 60px;
+    }
+    
+    #send, #reset{
+        color:#ffffff;
+        background-color:#282828;
+    }
+    
+    picture img{
+        width: 100%;
+        padding-top: 5%;
+    }
+    
+    section2 img{
+        display: inline-block;
+        width: 100%;
+    }
+    
+    #photoCol {
+        padding-bottom: 2%;
+        padding-top: 2%;
+    }
+    
+    iframe {
+        display: none;
+    }
+}
+
