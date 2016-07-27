@@ -1,9 +1,96 @@
 <html>
 <head>
   <title>Find stores - VR Era</title>
-  <link rel="stylesheet" href="CSS/index.css" type="text/css"/>
+  <link rel="stylesheet" href="CSS/findstore.css" type="text/css"/>
   <!-- Test -->
 </head>
 <body>
-</body>
-</html>
+  <div id="topBar">
+    <span id="headline">
+      <img class="logo" src="images/Logo_M.png" alt="VR Era Logo">
+    </span>
+    <span id="navBar">
+      <nav>
+        <ul>
+          <li class="notRightMost">What is VR?</li>
+          <li class="notRightMost">Find the Stores</li>
+          <li>Contact us</li>
+        </ul>
+      </nav>
+    </span>
+  </div>
+  <article>
+    <h1>Find the stores</h1>
+    <h2>The following shows the closest stores to your location.</h2>
+    <ul id="locations">
+      <li id="office-central" data-latlon="22.281931,114.155351">HKT Central Signature Shop: Shop A, G/F, Winway Building, 50 Wellington Street, Central
+      <br><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.8985116080858!2d114.15343995115968!3d22.28183394912221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3404007b359da03d%3A0xd9b27f362219d4bb!2sHKT+Shop!5e0!3m2!1sen!2shk!4v1469620385887" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></li>
+      <li id="office-mk" data-latlon="22.316599,114.170815">HKT Mongkok Flagship Shop: Shop No. 1,2,3,5, G/F, Ginza Plaza, No.2A Sai Yeung Choi Street South, Mong Kok
+      <br><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4389.323722215137!2d114.16981732616749!3d22.31710352107309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340400c6e23f5d95%3A0x449c77ce66eff68f!2sPCCW-HKT+Flagship+Store!5e0!3m2!1sen!2shk!4v1469620350587" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></li>
+      <li id="office-shatin" data-latlon="22.385473,114.187774">Shatin Smart Living Store: Shop 356, L3, HomeSquare, 138 Shatin Rural Committee Road, Sha Tin
+      <br><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3689.161298808241!2d114.18568595116055!3d22.385275945387992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340407b2667565dd%3A0x77b70598c33e0d9b!2sSmart+Living+Store!5e0!3m2!1sen!2shk!4v1469620404347" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></li>
+    </ul>
+  </article>
+  </body>
+
+  <script>
+  /*Script provided by: https://mobiforge.com/design-development/geo-sorting-using-device-geolocation-to-sort-distance */
+  /*LatLon Calucation from https://raw.githubusercontent.com/chrisveness/geodesy/master/latlon-spherical.js*/
+  function LatLon(lat, lon) {
+      // allow instantiation without 'new'
+      if (!(this instanceof LatLon)) return new LatLon(lat, lon);
+
+      this.lat = Number(lat);
+      this.lon = Number(lon);
+  }
+
+  LatLon.prototype.distanceTo = function(point, radius) {
+      if (!(point instanceof LatLon)) throw new TypeError('point is not LatLon object');
+      radius = (radius === undefined) ? 6371e3 : Number(radius);
+
+      var R = radius;
+      var y1 = this.lat.toRadians(),  x1 = this.lon.toRadians();
+      var y2 = point.lat.toRadians(), x2 = point.lon.toRadians();
+      var dy = y2 - y1;
+      var dx = x2 - x1;
+
+      var a = Math.sin(dy/2) * Math.sin(dy/2)
+            + Math.cos(y1) * Math.cos(y2)
+            * Math.sin(dx/2) * Math.sin(dx/2);
+      var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+      var d = R * c;
+      console.log(d);
+      return d;
+  };
+
+    window.onload = function() {
+      navigator.geolocation.getCurrentPosition(sortResults);
+      console.log();
+    }
+
+    function sortResults(position) {
+      // Grab current position
+      var latlon = new LatLon(position.coords.latitude, position.coords.longitude);
+      var locations = document.getElementById('locations');
+      var locationList = locations.querySelectorAll('li');
+      var locationArray = Array.prototype.slice.call(locationList, 0);
+
+      locationArray.sort(function(a,b){
+        var locA  = a.getAttribute('data-latlon').split(',');
+        var locB  = b.getAttribute('data-latlon').split(',');
+
+        distA = latlon.distanceTo(new LatLon(Number(locA[0]),Number(locA[1])));
+        distB = latlon.distanceTo(new LatLon(Number(locB[0]),Number(locB[1])));
+        return distA - distB;
+      });
+
+      //Reorder the list
+      locations.innerHTML = "";
+      locationArray.forEach(function(el) {
+        locations.appendChild(el);
+      });
+
+ };
+
+  </script>
+  </html>
