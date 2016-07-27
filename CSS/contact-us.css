@@ -68,7 +68,7 @@ ul.topnav li a {
     padding: 14px 16px;
     text-decoration: none;
     transition: 0.3s;
-    font-size: 17px;
+    font-size: 1.5vw;
 }
 
 ul.topnav li a:hover {background-color: #555;}
@@ -125,7 +125,7 @@ ul.topnav li.icon {display: none;}
     h1
 	{
 		padding: 0.25em;
-		font-size:3em;
+		font-size:3vw;
 		color:#fc6d36;
 	}
     
@@ -133,6 +133,7 @@ ul.topnav li.icon {display: none;}
 	{
 		color:#FEE0DA;
 		padding: 1em;
+        font-size:1.5vw;
 	}
     
     aside{
@@ -214,7 +215,7 @@ ul.topnav li.icon {display: none;}
     h1
 	{
 		padding: 0.25em;
-		font-size:3em;
+		font-size:5vw;
 		color:#fc6d36;
 	}
     
@@ -222,6 +223,7 @@ ul.topnav li.icon {display: none;}
 	{
 		color:#FEE0DA;
 		padding: 1em;
+        font-size:2vw;
 	}
     
     aside{
@@ -291,7 +293,7 @@ ul.topnav li.icon {display: none;}
     h1
 	{
 		padding: 0.25em;
-		font-size:3em;
+		font-size:10vw;
 		color:#fc6d36;
 	}
     
@@ -299,6 +301,7 @@ ul.topnav li.icon {display: none;}
 	{
 		color:#FEE0DA;
 		padding: 1em;
+        font-size:4vw;
 	}
     
     aside{
