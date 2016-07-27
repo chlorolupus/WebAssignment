@@ -77,6 +77,11 @@ ul.topnav li.icon {display: none;}
 
 
 @media screen and (min-width:1024px){
+     @viewport{
+        width: device-width;
+        zoom: 1;
+    }
+    
     body{
         background-color:#191919;
         padding:0 15% 5% 15%;
@@ -161,6 +166,11 @@ ul.topnav li.icon {display: none;}
 }
 
 @media screen and (min-width:481px) and (max-width:1023px){
+     @viewport{
+        width: device-width;
+        zoom: 1;
+    }
+    
     body{
         background-color:#191919;
         padding:0 15% 5% 15%;
@@ -244,6 +254,11 @@ ul.topnav li.icon {display: none;}
 }
 
 @media screen and (max-width:480px){
+     @viewport{
+        width: device-width;
+        zoom: 1;
+    }
+    
     body{
         background-color:#191919;
         padding:0 5% 5% 5%;
