@@ -1,25 +1,23 @@
 <html>
 <head>
   <title>Find stores - VR Era</title>
-  <link rel="stylesheet" href="CSS/index.css" type="text/css"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <link rel="stylesheet" href="CSS/findstore.css" type="text/css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
 </head>
 <body>
-  <div id="topBar">
-    <span id="headline">
-      <img class="logo" src="images/Logo_M.png" alt="VR Era Logo">
-    </span>
-    <span id="navBar">
-      <nav>
-        <ul>
-          <li class="notRightMost">What is VR?</li>
-          <li class="notRightMost">Find the Stores</li>
-          <li>Contact us</li>
-        </ul>
-      </nav>
-    </span>
-  </div>
+  <header>
+      <ul class="topnav" id="myTopnav">
+          <li><a class="active" href="#home"><a href="index.html">Home</a></a></li>
+          <li><a href="#WhatisVR"><a href="what-is-vr.html">What is VR?</a></a></li>
+          <li><a href="#FindTheStores"><a href="find-stores.html">Find the Stores</a></a></li>
+          <li><a href="#ContactUs"><a href="contact-us.html">Contact us</a></a></li>
+      <li class="icon">
+      <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
+      </li>
+  </ul>
+      <a href="index.html"><img class="logo" src="images/Logo_M.png" alt="VR Era Logo"></a>
+  </header>
   <article>
     <h1>Find the stores</h1>
     <h2>The following shows the closest stores to your location.</h2>
@@ -33,18 +31,25 @@
     </ul>
   </article>
   </body>
-
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
   <script>
   /*Script provided by: https://mobiforge.com/design-development/geo-sorting-using-device-geolocation-to-sort-distance */
   /*LatLon Calucation from https://raw.githubusercontent.com/chrisveness/geodesy/master/latlon-spherical.js*/
   function LatLon(lat, lon) {
       // allow instantiation without 'new'
       if (!(this instanceof LatLon)) return new LatLon(lat, lon);
-
       this.lat = Number(lat);
       this.lon = Number(lon);
   }
+  /** Extend Number object with method to convert numeric degrees to radians */
+  if (Number.prototype.toRadians === undefined) {
+      Number.prototype.toRadians = function() { return this * Math.PI / 180; };
+  }
 
+  /** Extend Number object with method to convert radians to numeric (signed) degrees */
+  if (Number.prototype.toDegrees === undefined) {
+      Number.prototype.toDegrees = function() { return this * 180 / Math.PI; };
+  }
   LatLon.prototype.distanceTo = function(point, radius) {
       if (!(point instanceof LatLon)) throw new TypeError('point is not LatLon object');
       radius = (radius === undefined) ? 6371e3 : Number(radius);
@@ -64,10 +69,6 @@
       return d;
   };
 
-    window.onload = function() {
-      navigator.geolocation.getCurrentPosition(sortResults);
-      console.log();
-    }
 
     function sortResults(position) {
       // Grab current position
@@ -93,5 +94,17 @@
 
  };
 
+      function myFunction() {
+             var x = document.getElementById("myTopnav");
+             if (x.className == "topnav") {
+                 x.className += " responsive";
+             } else {
+                 x.className = "topnav";
+             }
+         }
+
+         window.onload = function() {
+           navigator.geolocation.getCurrentPosition(sortResults);
+         }
   </script>
   </html>

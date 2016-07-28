@@ -4,28 +4,22 @@
   <title>VR Era - Looking at the Future</title>
   <link rel="stylesheet" href="CSS/index.css" type="text/css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
 
 </head>
 <body>
-<<<<<<< HEAD
-  <div id="topBar">
-    <span id="headline">
-      <img src="images/Logo.png" alt="VR Era Logo">
-    </span>
-    <span id="navBar">
-      <nav>
-=======
 
     <header>
-      <a href="index.html"><img class="logo" src="images/Logo_M.png" alt="VR Era Logo"></a>
-        <nav id="navBar">
->>>>>>> FixedViewport&FluidTextForContract
-        <ul>
-            <li class="nav1"><a href="what-is-vr.html">What is VR?</a></li>
-            <li class="nav2"><a href="find-stores.html">Find the Stores</a></li>
-            <li class="nav3"><a href="contact-us.html">Contact us</a></li>
+      <ul class="topnav" id="myTopnav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="what-is-vr.html">What is VR?</a></li>
+                <li><a href="find-stores.html">Find the Stores</a></li>
+                <li><a href="contact-us.html">Contact us</a></li>
+            <li class="icon">
+            <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
+            </li>
         </ul>
-      </nav>
+            <a href="index.html"><img class="logo" src="images/Logo_M.png" alt="VR Era Logo"></a>
   </header>
     
     <section2> 
@@ -41,7 +35,11 @@
                      sizes="(max-width:30em) 100vw,
                             (max-width:50em) 50vw,
                             calc(33vw-100px)">
-          <img src="images/HTCVive_L.png" alt="HTC Vive headset">
+        <div class="imgs">    
+        <img src="images/HTCVive_L.png" title="HTC Vive headset" alt="HTC Vive headset"> 
+            <div class="desc">HTC Vive headset</div>
+        </div>
+          
         
         <source src="images/OculusRift_L.png 1024w,
                           images/OculusRift_M.png 640w,
@@ -49,7 +47,10 @@
                      sizes="(max-width:30em) 100vw,
                             (max-width:50em) 50vw,
                             calc(33vw-100px)">
-          <img src="images/OculusRift_L.png" alt="Oculus Rift headset">
+        <div class="imgs"> 
+            <img src="images/OculusRift_L.png" title="Oculus Rift headset" alt="Oculus Rift headset">
+            <div class="desc">Oculus Rift headset</div>
+        </div>
         
         <source src="images/PlaystationVR_L.png 1024w,
                           images/PlaystationVR_M.png 640w,
@@ -57,7 +58,10 @@
                      sizes="(max-width:30em) 100vw,
                             (max-width:50em) 50vw,
                             calc(33vw-100px)">
-          <img src="images/PlaystationVR_L.png" alt="Playstation VR headset">
+        <div class="imgs"> 
+            <img src="images/PlaystationVR_L.png" title="PlayStation VR headset" alt="Playstation VR headset">
+            <div class="desc">PlayStation VR headset</div>
+        </div>
         
         <source src="images/GoogleCardboard_L.png 1024w,
                           images/GoogleCardboard_M.png 640w,
@@ -65,7 +69,10 @@
                      sizes="(max-width:30em) 100vw,
                             (max-width:50em) 50vw,
                             calc(33vw-100px)">
-          <img src="images/GoogleCardboard_L.png" alt="Google Cardboard headset">
+        <div class="imgs"> 
+            <img src="images/GoogleCardboard_L.png" title="Google Cardboard headset" alt="Google Cardboard headset">
+            <div class="desc">Google Cardboard headset</div>
+        </div>
         
     </div>
     
@@ -73,16 +80,27 @@
       VR(Virtual Reality) is a computing technology which creates a virtual environment and reacts to user's physical presence interactively. It provides sensory experience like sighting, touching, hearing and smelling.
     </p>
     
-    <iframe width="720" height="576"
-            src="https://www.youtube.com/embed/eHy90mzN3XI">
-    </iframe>
+    <div class="wrapper">
+        <div class="h_iframe">
+            <img class="ratio" src="http://placehold.it/16x9"/>
+            <iframe allowfullscreen
+                    src="https://www.youtube.com/embed/eHy90mzN3XI">
+            </iframe>
+        </div>
+    </div>
     
     
   </section2>
     
-    
-  <section>
-
-  </section>
+    <script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
 </body>
 </html>
