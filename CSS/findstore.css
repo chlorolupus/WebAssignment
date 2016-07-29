@@ -135,7 +135,6 @@ ul.topnav li.icon {display: none;}
 		font-size:3vw;
 		color:#fc6d36;
 	}
-
 	h2
 {
 	padding: 0.25em;
@@ -231,7 +230,12 @@ ul.topnav li.icon {display: none;}
 		font-size:5vw;
 		color:#fc6d36;
 	}
-
+	h2
+{
+	padding: 0.25em;
+	font-size:1vw;
+	color:#FEE0DA;
+}
 	p
 	{
 		color:#FEE0DA;
@@ -327,7 +331,12 @@ ul.topnav li.icon {display: none;}
 		font-size:10vw;
 		color:#fc6d36;
 	}
-
+	h2
+{
+	padding: 0.25em;
+	font-size:1vw;
+	color:#FEE0DA;
+}
 	p
 	{
 		color:#FEE0DA;
