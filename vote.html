@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
+
         <title>VR Era - Looking at the Future</title>
     <link rel="stylesheet" href="CSS/index.css" type="text/css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta charset="utf-8">
-        
+
         <style>
             div {
-              box-sizing: content-box; 
+              box-sizing: content-box;
               padding 0;
               margin: 0;
             }
@@ -46,7 +46,7 @@
         </style>
     </head>
     <body>
-        
+
         <header>
       <ul class="topnav" id="myTopnav">
                 <li><a href="index.html">Home</a></li>
@@ -59,7 +59,7 @@
         </ul>
             <a href="index.html"><img class="logo" src="images/Logo_M.png" alt="VR Era Logo"></a>
   </header>
-        
+
         <div id="container_puzzle">
            <div class="drop_square" id="square0"></div><!--
         --><div class="drop_square" id="square1"></div><!--
@@ -75,7 +75,7 @@
     --></div>
 <script>
     var imageSource = new Array ('e1.jpg', 'e2.jpg', 'e3.jpg', 'e4.jpg');
-       
+
     function drag(event) {
         event.dataTransfer.setData("text", event.target.id);
     }
@@ -95,7 +95,7 @@
         var draggedId = event.dataTransfer.getData("text");
         event.target.appendChild(document.getElementById(draggedId));
     }
-    
+
     function touchstart(event) {
         event.preventDefault();
         var piece = event.changedTouches[0].target;
@@ -103,41 +103,41 @@
         piece.addEventListener('touchend', touchend);
         piece.style.position = "absolute";
     }
-    
+
     function touchmove(event) {
         event.preventDefault();
         var piece = event.changedTouches[0].target;
         piece.style.left = (event.changedTouches[0].clientX - 50) + "px";
         piece.style.top = (event.changedTouches[0].clientY - 50) + "px";
     }
-    
+
     function touchend(event) {
         event.preventDefault();
         var piece = event.changedTouches[0].target;
         piece.style.position = "static";
-        
+
         //return piece to container
-        var allowBack = false; 
+        var allowBack = false;
         var touchPoint_X = Math.abs(event.changedTouches[0].clientX - 50);
         var touchPoint_Y = Math.abs(event.changedTouches[0].clientY - 50);
-        
+
         for(var i = 0; i <= 3; i++){
             var grid_X = document.getElementById('square'+i).offsetLeft;
             var grid_Y = document.getElementById('square'+i).offsetTop;
-            
+
             if(//lower right
-               touchPoint_X >= grid_X && touchPoint_X <= grid_X + 20 && 
+               touchPoint_X >= grid_X && touchPoint_X <= grid_X + 20 &&
                touchPoint_Y >= grid_Y && touchPoint_Y <= grid_Y + 20 ||
                //upper left
-               touchPoint_X <= grid_X && touchPoint_X >= grid_X - 20 && 
+               touchPoint_X <= grid_X && touchPoint_X >= grid_X - 20 &&
                touchPoint_Y <= grid_Y && touchPoint_Y >= grid_Y - 20 ||
                //lower left
                touchPoint_X <= grid_X && touchPoint_X >= grid_X - 20 &&
                touchPoint_Y >= grid_Y && touchPoint_Y <= grid_Y + 20 ||
                //upper right
-               touchPoint_X >= grid_X && touchPoint_X <= grid_X + 20 && 
+               touchPoint_X >= grid_X && touchPoint_X <= grid_X + 20 &&
                touchPoint_Y <= grid_Y && touchPoint_Y >= grid_Y - 20 ){
-                /*check if the grid is empty, 
+                /*check if the grid is empty,
                   empty = 0, allow put in,
                   else return*/
                 if(document.getElementById('square'+i).children.length == 0)
@@ -152,27 +152,34 @@
                 document.getElementById('container_pieces').appendChild(piece);
         }
     }
- 
+    function myFunction() {
+           var x = document.getElementById("myTopnav");
+           if (x.className == "topnav") {
+               x.className += " responsive";
+           } else {
+               x.className = "topnav";
+           }
+       }
     window.onload = function () {
         // Shuffle the pieces
         for (var i = 0; i < 50; i++) {
             var id1 = Math.floor(Math.random() * 4);
-            var id2 = Math.floor(Math.random() * 4); 
+            var id2 = Math.floor(Math.random() * 4);
             var temp = imageSource[id1];
             imageSource[id1] = imageSource[id2];
-            imageSource[id2] = temp; 
+            imageSource[id2] = temp;
         }
 
         for (var i = 0; i <= 3; i++) {
             var path ="/images/";
-            document.getElementById('piece'+i).src = path + imageSource[i]; 
+            document.getElementById('piece'+i).src = path + imageSource[i];
         }
-            
+
         for (var i = 0; i <= 3; i++){
             document.getElementById('piece'+i).addEventListener('dragstart', drag);
             document.getElementById('square'+i).addEventListener('dragover', allowDrop);
             document.getElementById('square'+i).addEventListener('drop', drop);
-            
+
             document.getElementById('piece'+i).addEventListener('touchstart', touchstart);
         }
         document.getElementById('container_pieces').addEventListener('dragover',allowDrop);
