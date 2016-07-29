@@ -237,7 +237,7 @@ ul.topnav li.icon {display: none;}
 	h2
 	{
 		padding: 0.25em;
-		font-size:1vw;
+		font-size:calc(48px +(60-480) * (100vw-480px)/(480 - 320));
 		color:#FEE0DA;
 	}
 	p
@@ -311,6 +311,7 @@ ul.topnav li.icon {display: none;}
 	ul.topnav.responsive li {
 		float: none;
 		display: inline;
+		font-size:20vw;
 	}
 	ul.topnav.responsive li a {
 		display: block;
@@ -344,7 +345,7 @@ ul.topnav li.icon {display: none;}
 	h2
 	{
 		padding: 0.25em;
-		font-size:3vw;
+		font-size:calc(48px +(60-480) * (100vw-480px)/(480 - 320));
 		color:#FEE0DA;
 	}
 	p
