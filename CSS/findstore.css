@@ -18,7 +18,7 @@ time, mark, audio, video
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-    font-family: Arial, Helvetica, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -52,23 +52,23 @@ table
 
 /*nar bar*/
 ul.topnav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #282828;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #282828;
 }
 
 ul.topnav li {float: left;}
 
 ul.topnav li a {
-    display: inline-block;
-    color: #ffffff;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    transition: 0.3s;
-    font-size: 1.5vw;
+	display: inline-block;
+	color: #ffffff;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	transition: 0.3s;
+	font-size: 1.5vw;
 }
 
 ul.topnav li a:hover {background-color: #555;}
@@ -77,298 +77,308 @@ ul.topnav li.icon {display: none;}
 
 
 #locations li{
-  color : #FEE0DA;
-  padding-bottom:1em;
+	color : #FEE0DA;
+	padding-bottom:1em;
 
 }
 
 
 @media screen and (min-width:1024px){
-     @viewport{
-        width: device-width;
-        zoom: 1;
-    }
+	@viewport{
+		width: device-width;
+		zoom: 1;
+	}
 
-    body{
-        background-color:#191919;
-        padding:0 15% 5% 15%;
-    }
+	body{
+		background-color:#191919;
+		padding:0 15% 5% 15%;
+	}
 
-    header
+	header
 	{
-        margin-bottom: 15px;
-        border-bottom: 3px solid #ff606d;
+		margin-bottom: 15px;
+		border-bottom: 3px solid #ff606d;
 	}
 
 
-    ul.topnav.responsive {position: relative;}
+	ul.topnav.responsive {position: relative;}
 
-    ul.topnav.responsive li.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    ul.topnav.responsive li {
-        float: none;
-        display: inline;
-    }
-    ul.topnav.responsive li a {
-        display: block;
-        text-align: left;
-    }
+	ul.topnav.responsive li.icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	ul.topnav.responsive li {
+		float: none;
+		display: inline;
+	}
+	ul.topnav.responsive li a {
+		display: block;
+		text-align: left;
+	}
 
 	.logo
 	{
-        padding: 1% 0;
-        width: 35%;
+		padding: 1% 0;
+		width: 35%;
 	}
 
-    section {
-        display: inline-block;
-        width: 48%;
-        padding-right: 10px;
-    }
+	section {
+		display: inline-block;
+		width: 48%;
+		padding-right: 10px;
+	}
 
-    h1
+	h1
 	{
 		padding: 0.25em;
 		font-size:3vw;
 		color:#fc6d36;
 	}
 	h2
-{
-	padding: 0.25em;
-	font-size:1vw;
-	color:#FEE0DA;
-}
+	{
+		padding: 0.25em;
+		font-size:3vw;
+		color:#FEE0DA;
+	}
 
 	p
 	{
 		color:#FEE0DA;
 		padding: 1em;
-        font-size:1.5vw;
+		font-size:1.5vw;
 	}
 
-    aside{
-        display: inline-flex;
-        width: 48%;
-    }
+	aside{
+		display: inline-flex;
+		width: 48%;
+	}
 
-    form{
-        width:100%;
-        padding: 1em;
-        color:#FEE0DA;
-    }
+	form{
+		width:100%;
+		padding: 1em;
+		color:#FEE0DA;
+	}
 
-    #name, #email, #comment{
-        color:#40d7ff;
-        background-color:#282828;
-        width: 100%;
-        padding: 5px;
-        border: none;
-    }
+	#name, #email, #comment{
+		color:#40d7ff;
+		background-color:#282828;
+		width: 100%;
+		padding: 5px;
+		border: none;
+	}
 
-    #comment{
-        height: 60px;
-    }
+	#comment{
+		height: 60px;
+	}
 
-    #send, #reset{
-        color:#ffffff;
-        background-color:#282828;
-    }
+	#send, #reset{
+		color:#ffffff;
+		background-color:#282828;
+	}
 
 }
 
 @media screen and (min-width:481px) and (max-width:1023px){
-     @viewport{
-        width: device-width;
-        zoom: 1;
-    }
-
-    body{
-        background-color:#191919;
-        padding:0 15% 5% 15%;
-    }
-
-    header
-	{
-        margin-bottom: 15px;
-        border-bottom: 3px solid #ff606d;
+	@viewport{
+		width: device-width;
+		zoom: 1;
 	}
 
-    ul.topnav.responsive {position: relative;}
+	body{
+		background-color:#191919;
+		padding:0 15% 5% 15%;
+	}
 
-    ul.topnav.responsive li.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    ul.topnav.responsive li {
-        float: none;
-        display: inline;
-    }
-    ul.topnav.responsive li a {
-        display: block;
-        text-align: left;
-    }
+	header
+	{
+		margin-bottom: 15px;
+		border-bottom: 3px solid #ff606d;
+	}
 
+	ul.topnav.responsive {position: relative;}
+
+	ul.topnav.responsive li.icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	ul.topnav.responsive li {
+		float: none;
+		display: inline;
+	}
+	ul.topnav.responsive li a {
+		display: block;
+		text-align: left;
+	}
+	ul.topnav li a {
+		display: block;
+		text-align: left;
+		font-size:2.5vw;
+	}
 	.logo
 	{
-        padding: 1% 0;
-        width: 30%
+		padding: 1% 0;
+		width: 30%
 	}
 
-    section {
-        display: inline-block;
-        width: 100%;
-        padding-right: 10px;
-    }
+	section {
+		display: inline-block;
+		width: 100%;
+		padding-right: 10px;
+	}
 
-    h1
+	h1
 	{
 		padding: 0.25em;
 		font-size:5vw;
 		color:#fc6d36;
 	}
 	h2
-{
-	padding: 0.25em;
-	font-size:1vw;
-	color:#FEE0DA;
-}
+	{
+		padding: 0.25em;
+		font-size:1vw;
+		color:#FEE0DA;
+	}
 	p
 	{
 		color:#FEE0DA;
 		padding: 1em;
-        font-size:2vw;
+		font-size:2vw;
 	}
 
-    aside{
-        display: inline-block;
-        width: 80%;
-    }
+	aside{
+		display: inline-block;
+		width: 80%;
+	}
 
-    form{
-        width:100%;
-        padding: 1em;
-        color:#FEE0DA;
-    }
+	form{
+		width:100%;
+		padding: 1em;
+		color:#FEE0DA;
+	}
 
-    #name, #email, #comment{
-        color:#40d7ff;
-        background-color:#282828;
-        width: 100%;
-        padding: 5px;
-        border: none;
-    }
+	#name, #email, #comment{
+		color:#40d7ff;
+		background-color:#282828;
+		width: 100%;
+		padding: 5px;
+		border: none;
+	}
 
-    #comment{
-        height: 60px;
-    }
+	#comment{
+		height: 60px;
+	}
 
-    #send, #reset{
-        color:#ffffff;
-        background-color:#282828;
-    }
+	#send, #reset{
+		color:#ffffff;
+		background-color:#282828;
+	}
 }
 
 @media screen and (max-width:480px){
-     @viewport{
-        width: device-width;
-        zoom: 1;
-    }
+	@viewport{
+		width: device-width;
+		zoom: 1;
+	}
 
-    body{
-        background-color:#191919;
-        padding:0 5% 5% 5%;
-    }
+	body{
+		background-color:#191919;
+		padding:0 5% 5% 5%;
+	}
 
-    header
+	header
 	{
-       margin-bottom: 15px;
-        border-bottom: 3px solid #ff606d;
-    }
+		margin-bottom: 15px;
+		border-bottom: 3px solid #ff606d;
+	}
 
 
-    ul.topnav li:not(:first-child) {display: none;}
+	ul.topnav li:not(:first-child) {display: none;}
 
-    ul.topnav li.icon {
-        float: right;
-        display: inline-block;
-    }
+	ul.topnav li.icon {
+		float: right;
+		display: inline-block;
+	}
 
-		ul.topnav.responsive {position: relative;}
+	ul.topnav.responsive {position: relative;}
 
-		ul.topnav.responsive li.icon {
-			position: absolute;
-			right: 0;
-			top: 0;
-		}
-		ul.topnav.responsive li {
-			float: none;
-			display: inline;
-		}
-		ul.topnav.responsive li a {
-				display: block;
-				text-align: left;
-			}
+	ul.topnav.responsive li.icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	ul.topnav.responsive li {
+		float: none;
+		display: inline;
+	}
+	ul.topnav.responsive li a {
+		display: block;
+		text-align: left;
+	}
+
+	ul.topnav li a {
+		display: block;
+		text-align: left;
+		font-size:5vw;
+	}
 
 	.logo
 	{
-        padding: 1% 0;
-        width: 45%;
+		padding: 1% 0;
+		width: 45%;
 	}
 
-    section {
-        display: inline-block;
-        width: 100%;
-        padding-right: 10px;
-    }
+	section {
+		display: inline-block;
+		width: 100%;
+		padding-right: 10px;
+	}
 
-    h1
+	h1
 	{
 		padding: 0.25em;
 		font-size:10vw;
 		color:#fc6d36;
 	}
 	h2
-{
-	padding: 0.25em;
-	font-size:1vw;
-	color:#FEE0DA;
-}
+	{
+		padding: 0.25em;
+		font-size:3vw;
+		color:#FEE0DA;
+	}
 	p
 	{
 		color:#FEE0DA;
 		padding: 1em;
-        font-size:4vw;
+		font-size:4vw;
 	}
 
-    aside{
-        display: inline-block;
-        width: 80%;
-    }
+	aside{
+		display: inline-block;
+		width: 80%;
+	}
 
-    form{
-        width:100%;
-        padding: 1em;
-        color:#FEE0DA;
-    }
+	form{
+		width:100%;
+		padding: 1em;
+		color:#FEE0DA;
+	}
 
-    #name, #email, #comment{
-        color:#40d7ff;
-        background-color:#282828;
-        width: 100%;
-        padding: 5px;
-        border: none;
-    }
+	#name, #email, #comment{
+		color:#40d7ff;
+		background-color:#282828;
+		width: 100%;
+		padding: 5px;
+		border: none;
+	}
 
-    #comment{
-        height: 60px;
-    }
+	#comment{
+		height: 60px;
+	}
 
-    #send, #reset{
-        color:#ffffff;
-        background-color:#282828;
-    }
+	#send, #reset{
+		color:#ffffff;
+		background-color:#282828;
+	}
 }
