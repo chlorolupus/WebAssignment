@@ -49,7 +49,12 @@ table
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+h2
+{
+	padding: 0.25em;
+	font-size:calc(60px +(60-48) * (100vw-480px)/(1024 - 480));
+	color:#FEE0DA;1
+}
 /*nar bar*/
 ul.topnav {
 	list-style-type: none;
@@ -135,12 +140,7 @@ ul.topnav li.icon {display: none;}
 		font-size:3vw;
 		color:#fc6d36;
 	}
-	h2
-	{
-		padding: 0.25em;
-		font-size:3vw;
-		color:#FEE0DA;
-	}
+
 
 	p
 	{
@@ -234,12 +234,7 @@ ul.topnav li.icon {display: none;}
 		font-size:5vw;
 		color:#fc6d36;
 	}
-	h2
-	{
-		padding: 0.25em;
-		font-size:calc(48px +(60-480) * (100vw-480px)/(480 - 320));
-		color:#FEE0DA;
-	}
+
 	p
 	{
 		color:#FEE0DA;
@@ -342,12 +337,7 @@ ul.topnav li.icon {display: none;}
 		font-size:10vw;
 		color:#fc6d36;
 	}
-	h2
-	{
-		padding: 0.25em;
-		font-size:calc(48px +(60-480) * (100vw-480px)/(480 - 320));
-		color:#FEE0DA;
-	}
+
 	p
 	{
 		color:#FEE0DA;
