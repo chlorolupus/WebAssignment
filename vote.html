@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>VR Era - Looking at the Future</title>
+    <link rel="stylesheet" href="CSS/index.css" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta charset="utf-8">
+        
+        <style>
+            div {
+              box-sizing: content-box; 
+              padding 0;
+              margin: 0;
+            }
+            #container_puzzle {
+              width: 100px;
+              height: 406px;
+              margin: auto;
+              border: dotted 1px #ffffff;
+              line-height: 0px; /* remove space between two div rows */
+            }
+            #container_pieces {
+              width: 410px;
+              height: 100px;
+              margin: auto;
+              padding: 10px;
+              border: dotted 1px #ffffff;
+            }
+            .drop_square,
+            .piece_square {
+              width: 100px;
+              height: 100px;
+              border: dotted 1px #ffffff;
+              line-height: 0px; /* remove space between two div rows */
+            }
+            img {
+                position: static;
+            }
+            #container_pieces img {
+                margin-right: 2px;
+            }
+            div[id^='square'] img {
+                margin: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <header>
+      <ul class="topnav" id="myTopnav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="what-is-vr.html">What is VR?</a></li>
+                <li><a href="find-stores.html">Find the Stores</a></li>
+                <li><a href="contact-us.html">Contact us</a></li>
+            <li class="icon">
+            <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
+            </li>
+        </ul>
+            <a href="index.html"><img class="logo" src="images/Logo_M.png" alt="VR Era Logo"></a>
+  </header>
+        
+        <div id="container_puzzle">
+           <div class="drop_square" id="square0"></div><!--
+        --><div class="drop_square" id="square1"></div><!--
+        --><div class="drop_square" id="square2"></div><!--
+        --><div class="drop_square" id="square3"></div><!--
+    --> </div>
+        <p>&nbsp;</p>
+        <div id="container_pieces">
+           <img id="piece0" draggable="true"><!--
+        --><img id="piece1" draggable="true"><!--
+        --><img id="piece2" draggable="true"><!--
+        --><img id="piece3" draggable="true"><!--
+    --></div>
+<script>
+    var imageSource = new Array ('e1.jpg', 'e2.jpg', 'e3.jpg', 'e4.jpg');
+       
+    function drag(event) {
+        event.dataTransfer.setData("text", event.target.id);
+    }
+    function allowDrop(event) {
+        // To prevent default event, such as click, to allow drop
+        if(event.target.id.indexOf("square")==-1&&event.target.id.indexOf("container_pieces")==-1){
+            console.log(event.target.id);
+            return;
+        }else{
+            event.preventDefault();
+        }
+    }
+    function drop(event) {
+        // To cancel other fired event, such as click
+        event.preventDefault();
+        // To get the piece being dragged, and drop it into the current square
+        var draggedId = event.dataTransfer.getData("text");
+        event.target.appendChild(document.getElementById(draggedId));
+    }
+    
+    function touchstart(event) {
+        event.preventDefault();
+        var piece = event.changedTouches[0].target;
+        piece.addEventListener('touchmove', touchmove);
+        piece.addEventListener('touchend', touchend);
+        piece.style.position = "absolute";
+    }
+    
+    function touchmove(event) {
+        event.preventDefault();
+        var piece = event.changedTouches[0].target;
+        piece.style.left = (event.changedTouches[0].clientX - 50) + "px";
+        piece.style.top = (event.changedTouches[0].clientY - 50) + "px";
+    }
+    
+    function touchend(event) {
+        event.preventDefault();
+        var piece = event.changedTouches[0].target;
+        piece.style.position = "static";
+        
+        //return piece to container
+        var allowBack = false; 
+        var touchPoint_X = Math.abs(event.changedTouches[0].clientX - 50);
+        var touchPoint_Y = Math.abs(event.changedTouches[0].clientY - 50);
+        
+        for(var i = 0; i <= 3; i++){
+            var grid_X = document.getElementById('square'+i).offsetLeft;
+            var grid_Y = document.getElementById('square'+i).offsetTop;
+            
+            if(//lower right
+               touchPoint_X >= grid_X && touchPoint_X <= grid_X + 20 && 
+               touchPoint_Y >= grid_Y && touchPoint_Y <= grid_Y + 20 ||
+               //upper left
+               touchPoint_X <= grid_X && touchPoint_X >= grid_X - 20 && 
+               touchPoint_Y <= grid_Y && touchPoint_Y >= grid_Y - 20 ||
+               //lower left
+               touchPoint_X <= grid_X && touchPoint_X >= grid_X - 20 &&
+               touchPoint_Y >= grid_Y && touchPoint_Y <= grid_Y + 20 ||
+               //upper right
+               touchPoint_X >= grid_X && touchPoint_X <= grid_X + 20 && 
+               touchPoint_Y <= grid_Y && touchPoint_Y >= grid_Y - 20 ){
+                /*check if the grid is empty, 
+                  empty = 0, allow put in,
+                  else return*/
+                if(document.getElementById('square'+i).children.length == 0)
+                    {
+                        document.getElementById('square'+i).appendChild(piece);
+                        allowBack = true;
+                    }else{
+                        document.getElementById('container_piece').appendChild(piece);
+                    }
+            }
+            if(allowBack == false)
+                document.getElementById('container_pieces').appendChild(piece);
+        }
+    }
+ 
+    window.onload = function () {
+        // Shuffle the pieces
+        for (var i = 0; i < 50; i++) {
+            var id1 = Math.floor(Math.random() * 4);
+            var id2 = Math.floor(Math.random() * 4); 
+            var temp = imageSource[id1];
+            imageSource[id1] = imageSource[id2];
+            imageSource[id2] = temp; 
+        }
+
+        for (var i = 0; i <= 3; i++) {
+            var path ="/images/";
+            document.getElementById('piece'+i).src = path + imageSource[i]; 
+        }
+            
+        for (var i = 0; i <= 3; i++){
+            document.getElementById('piece'+i).addEventListener('dragstart', drag);
+            document.getElementById('square'+i).addEventListener('dragover', allowDrop);
+            document.getElementById('square'+i).addEventListener('drop', drop);
+            
+            document.getElementById('piece'+i).addEventListener('touchstart', touchstart);
+        }
+        document.getElementById('container_pieces').addEventListener('dragover',allowDrop);
+        document.getElementById('container_pieces').addEventListener('drop',drop);
+    }
+        </script>
+    </body>
+</html>
